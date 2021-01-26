@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Lab 2 - ES3011 Experimental Lab</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../theme_override.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Lab 2";
+    var mkdocs_page_input_path = "lab-docs/lab2.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../lab-overview/" class="icon icon-home"> ES3011 Experimental Lab</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../lab-overview/">Lab Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lab Instructions</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../lab1/">Lab 1</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Lab 2</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#lab_2_mathematical_modeling_i">Lab 2: Mathematical Modeling I</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#introduction">Introduction</a></li>
+        
+            <li><a class="toctree-l4" href="#1_mathematical_modeling_of_basic_dynamical_systems">1. Mathematical Modeling of Basic Dynamical Systems</a></li>
+        
+            <li><a class="toctree-l4" href="#2_mathematical_modeling_of_the_self-balancing_robot">2. Mathematical Modeling of the Self-Balancing Robot</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../lab3/">Lab 3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../lab4/">Lab 4</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../lab5/">Lab 5</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../lab6/">Lab 6</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../lab7/">Lab 7</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../lab-overview/">ES3011 Experimental Lab</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../lab-overview/">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Lab Instructions &raquo;</li>
+        
+      
+    
+    <li>Lab 2</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="lab_2_mathematical_modeling_i">Lab 2: Mathematical Modeling I<a class="headerlink" href="#lab_2_mathematical_modeling_i" title="Permanent link">&para;</a></h1>
+<!-- ###### Description
+* Learn how to develop mathematical models of physical dynamic systems. This would include:
+    * Mass-spring-damper
+    * ~~RLC circuit~~
+    * DC motor
+    * Self-balancing robot
+
+###### What to Submit
+* Report showing a summary of exercises completed for MATLAB and Simulink.
+    * MATLAB code showing the state-space model of each dynamic systems -->
+
+<!-- 
+!!! note 
+    We need to experimentally obtain the dynamic parameters of the self-balancing robot
+     -->
+
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<p>Welcome to the second session of the ES3011 experimental labs. </p>
+<ol>
+<li>
+<p>Mathematical modeling of basic dynamical systems</p>
+</li>
+<li>
+<p>Mathematical modeling of self-balancing robot system</p>
+</li>
+</ol>
+<h5 id="learning_outcomes">Learning Outcomes<a class="headerlink" href="#learning_outcomes" title="Permanent link">&para;</a></h5>
+<p>You should be able to:</p>
+<ul>
+<li>Understand and describe the dynamical system using mathematically using differential equations</li>
+<li>Convert the differential equations to state-space model form by hand and using MATLAB functionality</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="1_mathematical_modeling_of_basic_dynamical_systems">1. Mathematical Modeling of Basic Dynamical Systems<a class="headerlink" href="#1_mathematical_modeling_of_basic_dynamical_systems" title="Permanent link">&para;</a></h4>
+<p>In this section, you will develop mathematical models for basic dynamical systems considered in control systems such as the mass-spring-damper and the DC motor. These models will then be put into state-space representation which will be used in future lab sessions for simulation and analysis.</p>
+<h5 id="instructions">Instructions:<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h5>
+<p>In this lab <a href="../documents/Lab2.pdf">instruction sheet</a>,</p>
+<ul>
+<li>Review the MATLAB Intro section</li>
+<li>Complete problems I (Mass-spring-damper) and IV (Motor position)</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="2_mathematical_modeling_of_the_self-balancing_robot">2. Mathematical Modeling of the Self-Balancing Robot<a class="headerlink" href="#2_mathematical_modeling_of_the_self-balancing_robot" title="Permanent link">&para;</a></h4>
+<p><img alt="robot" src="../media/robot2.png" /></p>
+<p>ADD MORE INFORMATION HERE ON MODELING THE ROBOT DYNAMICS</p>
+<!-- In this section, you will develop mathematical models for basic dynamical systems considered in control systems such as the mass-spring-damper and the DC motor. These models will then be put into state-space representation which will be used in future lab sessions for simulation and analysis.
+
+##### Instructions:
+In this lab [instruction sheet](../documents/Lab2.pdf),
+
+* Review the MATLAB Intro section
+* Complete problems I (Mass-spring-damper) and IV (Motor position) -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../lab3/" class="btn btn-neutral float-right" title="Lab 3">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../lab1/" class="btn btn-neutral" title="Lab 1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../lab1/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../lab3/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
