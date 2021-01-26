@@ -1,4 +1,4 @@
-site_name: PARC
+site_name: ES3011 Experimental Lab
 theme: readthedocs
 markdown_extensions:
     - admonition
@@ -10,20 +10,14 @@ markdown_extensions:
 plugins:
     - search
 nav:
-    - 'Competition Overview': 'competition-overview/index.md'
-
-    - 'Competition Instruction': 
-        - 'Phase 1: Simulation':
-            - 'Introduction': 'phase1-instructions/index.md'
-            - 'Task 1: Sidewalk following': 'phase1-instructions/task1.md'
-            - 'Task 2: Traffic sign detection and recognition': 'phase1-instructions/task2.md'
-            - 'Task 3: Go-to-goal navigation': 'phase1-instructions/task3.md'
-            - 'How to Submit': 'phase1-instructions/how-to-submit.md'
-        - 'Phase 2: Physical Robot': 'phase2-instructions/index.md'
-
-    - 'Getting Started Tutorials':
-        - 'Setting up your PC': 'getting-started/setting-up-your-pc/index.md'
-        - 'Setting up your Workspace': 'getting-started/setting-up-your-workspace/index.md'
-        - 'Introduction to ROS': 'getting-started/understanding-ros.md'
+    - 'Lab Overview': 'lab-overview/index.md'
+    - 'Lab Instructions':
+        - 'Lab 1': 'lab-docs/lab1.md'
+        - 'Lab 2': 'lab-docs/lab2.md'
+        - 'Lab 3': 'lab-docs/lab3.md'
+        - 'Lab 4': 'lab-docs/lab4.md'
+        - 'Lab 5': 'lab-docs/lab5.md'
+        - 'Lab 6': 'lab-docs/lab6.md'
+        - 'Lab 7': 'lab-docs/lab7.md'
 
 extra_css: [theme_override.css]
