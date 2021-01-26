@@ -1,4 +1,4 @@
-# documentation
+# ES3011 Controls Lab Documentation
 
 
 ## Setup
