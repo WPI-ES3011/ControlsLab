@@ -1,21 +1,3 @@
 # ES3011 Controls Lab Documentation
 
-
-## Setup
-```
-pip install mkdocs
-git config core.hooksPath .githooks
-```
-**NOTE**: mkdocs command should be available in PATH, please install it globally (and not in any virtual-env)
-
-## Develop
-```
-mkdocs serve
-```
-
-## Deploy
-```
-git add -A
-git commit
-git push
-```
+Access the documentation [here](https://wpi-es3011.github.io/ControlsLab/lab-overview/)
