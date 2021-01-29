@@ -154,7 +154,7 @@
 * Check-out that your robot is set up and operational from your PC. -->
 
 <h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
-<p>Welcome to the first session of the ES3011 experimental labs. </p>
+<p>Welcome to the first session of the ES3011 experimental labs. We have two (2) sections in this lab:</p>
 <ol>
 <li>
 <p>Introduction to MATLAB</p>
@@ -164,7 +164,7 @@
 </li>
 </ol>
 <h5 id="learning_outcomes">Learning Outcomes<a class="headerlink" href="#learning_outcomes" title="Permanent link">&para;</a></h5>
-<p>You should be able to:</p>
+<p>Our goal at the end of this labs is that you should be able to:</p>
 <ul>
 <li>Perform basic linear algebra computations using MATLAB command window</li>
 <li>Write and run a MATLAB script</li>
@@ -177,17 +177,18 @@
 <p>In this section, you will get a gentle introduction to MATLAB and how to use it for control systems design and analysis.</p>
 <h5 id="instructions">Instructions:<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h5>
 <ol>
-<li>Access the MATLAB Tutorials here [Add link]</li>
-<li>Read and complete the following exercises:<ul>
+<li>If you don't have MATLAB, please follow this <a href="../documents/HowToDownloadMatlab.pdf">guide</a> on installing MATLAB.</li>
+<li>Access the MATLAB Tutorials <a href="https://canvas.wpi.edu/courses/23468/files/3430459?wrap=1">here</a></li>
+<li>Read through the following chapters to get the basics:<ul>
 <li>Chapter 1</li>
 <li>Chapter 2</li>
 <li>Chapter 3 (through Identity Matrix, but skip 3D plotting, multi-dimensional arrays and structures)</li>
 </ul>
 </li>
-<li>Create a MATLAB script that does the following:<ul>
-<li>Adds two 3x3 identity matrices and multiplies that result by the vector [1;2;3]</li>
-<li>Plots the function <code>y = sin(t)</code> from 0 to 10 seconds with labeled axes and a suitable title.</li>
-<li>Finds the roots of <code>s^4 + 3s^3 - 15s^2 -2s + 9</code>. Hint: First declare <code>s = tf('s')</code> and use <code>zero(_yourFunction_)</code> to find the roots.</li>
+<li>Open up the MATLAB software. Create a MATLAB script that does the following:<ul>
+<li><strong>Q1:</strong> Add two 3x3 identity matrices and multiplies that result by the vector <code>[1;2;3]</code></li>
+<li><strong>Q2:</strong> Plot the function <code>y = sin(t)</code> from 0 to 10 seconds with labeled axes and a suitable title.</li>
+<li><strong>Q3:</strong> Find the roots of <code>s^4 + 3s^3 - 15s^2 - 2s + 9</code>. Hint: First declare <code>s = tf('s')</code> and use <code>zero(_yourFunction_)</code> to find the roots.</li>
 </ul>
 </li>
 </ol>
@@ -203,7 +204,7 @@
 <li>Download Git (with Git Bash) <a href="https://git-scm.com/downloads">here</a></li>
 <li>Calibrating the robot sensors (on-board IMU):<ul>
 <li>The self-balancing robot uses an IMU (inertial measurement unit) for pose measurement. This sensor needs to be calibrated properly.</li>
-<li>Follow the instructions <a href="../documents/RobotCalibration.pdf">here</a></li>
+<li>Follow the instructions <a href="../documents/BalBotCalibration.pdf">here</a></li>
 </ul>
 </li>
 </ol>
@@ -212,13 +213,16 @@
 <h4 id="what_to_submit">What to Submit:<a class="headerlink" href="#what_to_submit" title="Permanent link">&para;</a></h4>
 <p>Prepare a report which contains the following:</p>
 <ul>
-<li>Introduction: a few sentences to introduce the topic of the lab</li>
-<li>Section 1: MATLAB<ul>
-<li>Publish your script (and its output) as a PDF from MATLAB. Follow this <a href="https://blogs.mathworks.com/community/2009/11/16/publish-to-pdf/">guide</a> to see how to to.</li>
+<li><strong>Introduction:</strong> a few sentences to introduce the topic of the lab</li>
+<li><strong>Section 1:</strong> MATLAB<ul>
+<li>Publish your script (and its output) as a PDF from MATLAB. Follow this <a href="https://www.mathworks.com/help/matlab/matlab_prog/publishing-matlab-code.html">guide</a> to see how to.</li>
 </ul>
 </li>
-<li>Section 2: Self-balancing Robot Setup</li>
-<li>Conclusion: a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.</li>
+<li><strong>Section 2:</strong> Self-balancing Robot Setup <ul>
+<li>[<em>Nothing to report here. Just ensure you are able to calibrate your robot</em>]</li>
+</ul>
+</li>
+<li><strong>Conclusion:</strong> a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.</li>
 </ul>
               
             </div>

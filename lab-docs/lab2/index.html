@@ -75,7 +75,9 @@
         
             <li><a class="toctree-l4" href="#1_mathematical_modeling_of_basic_dynamical_systems">1. Mathematical Modeling of Basic Dynamical Systems</a></li>
         
-            <li><a class="toctree-l4" href="#2_mathematical_modeling_of_the_self-balancing_robot">2. Mathematical Modeling of the Self-Balancing Robot</a></li>
+            <li><a class="toctree-l4" href="#2_mathematical_modeling_of_the_balbot">2. Mathematical Modeling of the BalBot</a></li>
+        
+            <li><a class="toctree-l4" href="#what_to_submit">What to Submit:</a></li>
         
         </ul>
     
@@ -159,19 +161,20 @@
      -->
 
 <h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
-<p>Welcome to the second session of the ES3011 experimental labs. </p>
+<p>Welcome to the second session of the ES3011 experimental labs. In this lab, we focus on mathematical modeling. The central question is <em>"How do describe/model our physical system mathematically to be able to anaylze its behavior?"</em></p>
+<p>We will cover two sections in this lab:</p>
 <ol>
 <li>
 <p>Mathematical modeling of basic dynamical systems</p>
 </li>
 <li>
-<p>Mathematical modeling of self-balancing robot system</p>
+<p>Mathematical modeling of of the BalBot (self-balancing robot)</p>
 </li>
 </ol>
 <h5 id="learning_outcomes">Learning Outcomes<a class="headerlink" href="#learning_outcomes" title="Permanent link">&para;</a></h5>
-<p>You should be able to:</p>
+<p>Our goal at the end of this labs is that you should be able to:</p>
 <ul>
-<li>Understand and describe the dynamical system using mathematically using differential equations</li>
+<li>Understand and describe/model physical dynamic systems mathematically using differential equations</li>
 <li>Convert the differential equations to state-space model form by hand and using MATLAB functionality</li>
 </ul>
 <hr />
@@ -186,16 +189,60 @@
 </ul>
 <hr />
 <p><br></p>
-<h4 id="2_mathematical_modeling_of_the_self-balancing_robot">2. Mathematical Modeling of the Self-Balancing Robot<a class="headerlink" href="#2_mathematical_modeling_of_the_self-balancing_robot" title="Permanent link">&para;</a></h4>
-<p><img alt="robot" src="../media/robot2.png" /></p>
-<p>ADD MORE INFORMATION HERE ON MODELING THE ROBOT DYNAMICS</p>
-<!-- In this section, you will develop mathematical models for basic dynamical systems considered in control systems such as the mass-spring-damper and the DC motor. These models will then be put into state-space representation which will be used in future lab sessions for simulation and analysis.
-
-##### Instructions:
-In this lab [instruction sheet](../documents/Lab2.pdf),
-
-* Review the MATLAB Intro section
-* Complete problems I (Mass-spring-damper) and IV (Motor position) -->
+<h4 id="2_mathematical_modeling_of_the_balbot">2. Mathematical Modeling of the BalBot<a class="headerlink" href="#2_mathematical_modeling_of_the_balbot" title="Permanent link">&para;</a></h4>
+<p><img alt="robot" src="../media/robot.png" /></p>
+<p>In this section, we will derive the mathematical model for the Balbot. We can take a simplified approach to the modeling problem by decomposing the BalBot system into sub-components. This is a convenient assumption to simplify the modeling task. The sub-components are: (1) the robot wheels, (2) the motors, (3) robot chassis. </p>
+<h6 id="preliminaries_review_the_equivalent_free-body_diagram_for_the_complete_system">Preliminaries: Review the equivalent free-body diagram for the complete system<a class="headerlink" href="#preliminaries_review_the_equivalent_free-body_diagram_for_the_complete_system" title="Permanent link">&para;</a></h6>
+<p>Following the system decomposition, we can draw a simplified representation of the robot as above. We have made a few assumptions:</p>
+<ul>
+<li>The robot moves only in the X-Y plane.</li>
+<li>The robot wheels don't slip, hence we can assume the wheel position is linearly related to the wheel radius and angular displacement.</li>
+</ul>
+<p><img alt="complete_system" src="../media/complete_system.jpg" /></p>
+<h6 id="question_1_derive_the_equations_of_motion_for_the_robot_wheel">Question 1: Derive the equations of motion for the robot wheel<a class="headerlink" href="#question_1_derive_the_equations_of_motion_for_the_robot_wheel" title="Permanent link">&para;</a></h6>
+<p>We have provided the free-body diagram of the robot wheel below. Your task is to derive the equations of motion for the wheel given the forces and torques acting on the wheel.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><code>Fx</code> and <code>Fy</code> are the reaction forces of the robot chassis on the wheel.</li>
+<li><code>theta_wheel</code> is the angular displacement of the wheel.</li>
+<li><code>N</code> is the reaction force on the ground.</li>
+<li><code>Ft</code> is the traction force.</li>
+<li><code>Tm</code> is the motor torque on the wheel.</li>
+</ul>
+</div>
+<p><img alt="wheel" src="../media/wheel.jpg" /></p>
+<h6 id="question_2_derive_the_equations_of_motion_for_the_robot_chassis">Question 2: Derive the equations of motion for the robot chassis<a class="headerlink" href="#question_2_derive_the_equations_of_motion_for_the_robot_chassis" title="Permanent link">&para;</a></h6>
+<p>We have provided the free-body diagram of the robot chassis below. Your task is to derive the equations of motion for the chassis given the forces and torques acting on it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><code>Fx</code> and <code>Fy</code> are the reaction forces of the robot chassis on the wheel.</li>
+<li><code>theta_p</code> is the angular displacement of the robot chassis in the sagittal plane.</li>
+<li><code>Mr</code> is the mass of the robot chassis.</li>
+<li><code>Tm</code> is the motor torque on the wheel.</li>
+</ul>
+</div>
+<p><img alt="chassis" src="../media/chassis.jpg" /></p>
+<h6 id="question_3_derive_the_relationship_between_motor_torque_and_voltage_speed_etc">Question 3: Derive the relationship between motor torque and voltage, speed, etc.<a class="headerlink" href="#question_3_derive_the_relationship_between_motor_torque_and_voltage_speed_etc" title="Permanent link">&para;</a></h6>
+<p>Finally, you need to derive an equation which relates the torque generated by the motor and the supplied voltage. This is required to replace the torque values in the above equations because the control input to BalBot is motor voltage.</p>
+<p>Please refer to the lab <a href="../documents/Lab2.pdf">instruction sheet</a> for a reminder on the equations describing a DC motor.</p>
+<p><img alt="chassis" src="../media/motor.jpg" /></p>
+<h4 id="what_to_submit">What to Submit:<a class="headerlink" href="#what_to_submit" title="Permanent link">&para;</a></h4>
+<p>Prepare a report which contains the following:</p>
+<ul>
+<li><strong>Introduction:</strong> a few sentences to introduce the topic of the lab</li>
+<li><strong>Section 1:</strong> Mathematical Modeling of Basic Dynamical Systems (MATLAB)<ul>
+<li>Include free-body diagram and/or equations of motion for the two systems assigned.</li>
+<li>Publish your MATLAB script with the defined state-space models as a PDF. Follow this <a href="https://www.mathworks.com/help/matlab/matlab_prog/publishing-matlab-code.html">guide</a> to see how to.</li>
+</ul>
+</li>
+<li><strong>Section 2:</strong> Mathematical Modeling of the BalBot <ul>
+<li>Answer the three questions above. Redraw the free-body diagrams and derive the equations with variables clearly labelled.</li>
+</ul>
+</li>
+<li><strong>Conclusion:</strong> a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.</li>
+</ul>
               
             </div>
           </div>
