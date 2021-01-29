@@ -1,6 +1,6 @@
 # LAB 4: Transfer Functions & Transient Response
 
-### Description:
+<!-- ### Description:
 * Learn how to create transfer functions for the physical dynamic systems:
     * Mass-spring-damper
     * DC motor
@@ -9,4 +9,6 @@
 
 ### What to Submit:
 * Report showing a summary of exercises completed by hand as well as with MATLAB.
-    * MATLAB generated plot of the transient response of each dynamic systems
+    * MATLAB generated plot of the transient response of each dynamic systems -->
+
+![work_in_progress](../media/wip.jpg)

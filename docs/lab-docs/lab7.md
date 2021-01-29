@@ -1,6 +1,8 @@
 # LAB 7: Controller Tuning & Final Competition
 
-### Description:
+<!-- ### Description:
 
 
-### What to Submit:
+### What to Submit: -->
+
+![work_in_progress](../media/wip.jpg)
