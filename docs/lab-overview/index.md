@@ -16,13 +16,14 @@ In this lab, you will get to hands-on experience learning fundamental control sy
 
 |  Lab# | Title    | Date |
 | ------------- | ----------- | ----------- |
-|  1  | Intro to MATLAB & Self-Balancing Robot Setup     |   Feb. 3
-|  2  | Mathematical Modeling I     |  Feb. 10
-|  3  | Laplace Transforms & Mathematical Modeling II     |  Feb. 17
-|  4  | Transfer Functions & Transient Response   |  Feb. 24
-|  5  | Control Design: P, PI, PID Controllers     |    Mar. 3
-|  6  | Stability Analysis & Frequency Response    |    Mar. 10
-|  7  | Controller Tuning & Final Competition   |   Mar. 17
+|  1  | Intro to MATLAB & Self-Balancing Robot Setup     |   Feb. 5
+|  2  | Mathematical Modeling I     |  Feb. 12
+|  3  | Laplace Transforms & Mathematical Modeling II     |  Feb. 19
+|  4  | Transfer Functions & Transient Response   |  Feb. 26 *
+|  5  | Control Design: P, PI, PID Controllers     |    Mar. 5
+|  6  | Stability Analysis & Frequency Response    |    Mar. 12
+
+<!-- |  7  | Controller Tuning & Final Competition   |   Mar. 17 -->
 
 
 <!-- !!! note

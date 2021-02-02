@@ -15,7 +15,9 @@
     We need to experimentally obtain the dynamic parameters of the self-balancing robot
      -->
 
-#### Introduction
+![work_in_progress](../media/wip.jpg)
+
+<!-- #### Introduction
 
 Welcome to the second session of the ES3011 experimental labs. In this lab, we focus on mathematical modeling. The central question is *"How do describe/model our physical system mathematically to be able to anaylze its behavior?"*
 
@@ -112,4 +114,4 @@ Prepare a report which contains the following:
     * Publish your MATLAB script with the defined state-space models as a PDF. Follow this [guide](https://www.mathworks.com/help/matlab/matlab_prog/publishing-matlab-code.html) to see how to.
 * **Section 2:** Mathematical Modeling of the BalBot 
     * Answer the three questions above. Redraw the free-body diagrams and derive the equations with variables clearly labelled.
-* **Conclusion:** a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.
+* **Conclusion:** a few sentences concluding the report explaining the goals, what you learned, and any other conclusions. -->

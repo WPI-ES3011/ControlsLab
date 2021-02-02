@@ -18,6 +18,6 @@ nav:
         - 'Lab 4': 'lab-docs/lab4.md'
         - 'Lab 5': 'lab-docs/lab5.md'
         - 'Lab 6': 'lab-docs/lab6.md'
-        - 'Lab 7': 'lab-docs/lab7.md'
+        # - 'Lab 7': 'lab-docs/lab7.md'
 
 extra_css: [theme_override.css]
