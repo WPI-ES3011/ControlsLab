@@ -3,29 +3,27 @@
 <!-- ###### Description
 * Learn how to develop mathematical models of physical dynamic systems. This would include:
     * Mass-spring-damper
-    * ~~RLC circuit~~
     * DC motor
     * Self-balancing robot
 
 ###### What to Submit
 * Report showing a summary of exercises completed for MATLAB and Simulink.
     * MATLAB code showing the state-space model of each dynamic systems -->
-<!-- 
-!!! note 
-    We need to experimentally obtain the dynamic parameters of the self-balancing robot
-     -->
 
-![work_in_progress](../media/wip.jpg)
 
-<!-- #### Introduction
+<!-- ![work_in_progress](../media/wip.jpg) -->
+
+#### Introduction
 
 Welcome to the second session of the ES3011 experimental labs. In this lab, we focus on mathematical modeling. The central question is *"How do describe/model our physical system mathematically to be able to anaylze its behavior?"*
 
-We will cover two sections in this lab:
+We will cover three sections in this lab:
 
 1. Mathematical modeling of basic dynamical systems
 
 2. Mathematical modeling of of the BalBot (self-balancing robot)
+
+3. Testing Balbot IMU Calibration
 
 ##### Learning Outcomes
 Our goal at the end of this labs is that you should be able to:
@@ -55,9 +53,84 @@ In this lab [instruction sheet](../documents/Lab2.pdf),
 
 ![robot](../media/robot.png)
 
-In this section, we will derive the mathematical model for the Balbot. We can take a simplified approach to the modeling problem by decomposing the BalBot system into sub-components. This is a convenient assumption to simplify the modeling task. The sub-components are: (1) the robot wheels, (2) the motors, (3) robot chassis. 
+In this section, we will derive the mathematical model for the Balbot.
 
-###### Preliminaries: Review the equivalent free-body diagram for the complete system
+##### Instructions:
+In this lab [instruction sheet](../documents/ES3011_LAB2.pdf),
+
+* You are required to answer all 5 questions in the sheet and record your solutions in your report.
+
+*** 
+<br>
+
+#### 3. Testing Balbot IMU Calibration
+
+
+In Lab 1, we completed the IMU calibration process to ensure the robot get accurate feedback from the IMU sensor about its orientation. In this section, we will now test the calibration process by reading off the robot's pitch values on MATLAB using serial comm.
+
+##### Instructions:
+
+**1. Update your Balbot software:**
+
+- To update the Balbot software on your local PC, please run the `git pull` command in the directory where you cloned the WPI-ES3011 repository
+    
+<!-- ``` shell
+$ git pull
+``` -->
+
+**2. Build and upload code to the Balbot:**
+
+- First, connect the robot to your PC via USB.
+- Start up VS Code and, following the procedure in Lab 1, build and upload the code to the robot.
+
+
+**3. Test the IMU calibration on MATLAB:**
+
+- Next step is to start up MATLAB. 
+- Make sure you navigate to directory where you have saved the WPI-ES3011 Lab software
+- Run the following command in your MATLAB command window (instead of <team-ID> add your actual team ID, e.g. 'Team 1')
+``` matlab
+>> balbot_serial(<team-ID>)
+```
+
+- Make sure you observe that the pitch value changes correctly as you manually move the robot about the X-axis.
+- Take screen shots of your MATLAB output (similar to Fig. 2) when the robot is in three positions:
+    - Upright position (pitch = ~0 rad)
+    - Leaning backward (as far as you can go)
+    - Leaning forward (as far as you can go)
+
+
+<br>
+
+*Fig 1:*
+![lab2-command](../media/lab2-command.png)
+
+*Fig 2:*
+![lab2-result](../media/lab2-result.png)
+
+
+*** 
+<br>
+
+
+#### What to Submit:
+Prepare a report which contains the following:
+
+* **Introduction:** a few sentences to introduce the topic of the lab
+* **Section 1:** Mathematical Modeling of Basic Dynamical Systems (MATLAB)
+    * Include free-body diagram and/or equations of motion for the two systems assigned.
+    * Publish your MATLAB script with the defined state-space models as a PDF. Follow this [guide](https://www.mathworks.com/help/matlab/matlab_prog/publishing-matlab-code.html) to see how to.
+* **Section 2:** Mathematical Modeling of the BalBot 
+    * Present your answers to the five questions in your report. Make sure you include a free-body diagram of the robot in your report.
+* **Section 3:** Test the IMU calibration on MATLAB
+    * Show the three MATLAB screen shots as described above.
+* **Conclusion:** a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.
+
+
+
+<!-- We can take a simplified approach to the modeling problem by decomposing the BalBot system into sub-components. This is a convenient assumption to simplify the modeling task. The sub-components are: (1) the robot wheels, (2) the motors, (3) robot chassis.  -->
+
+<!-- ###### Preliminaries: Review the equivalent free-body diagram for the complete system
 
 Following the system decomposition, we can draw a simplified representation of the robot as above. We have made a few assumptions:
 
@@ -101,17 +174,4 @@ Finally, you need to derive an equation which relates the torque generated by th
 
 Please refer to the lab [instruction sheet](../documents/Lab2.pdf) for a reminder on the equations describing a DC motor.
 
-![chassis](../media/motor.jpg)
-
-
-
-#### What to Submit:
-Prepare a report which contains the following:
-
-* **Introduction:** a few sentences to introduce the topic of the lab
-* **Section 1:** Mathematical Modeling of Basic Dynamical Systems (MATLAB)
-    * Include free-body diagram and/or equations of motion for the two systems assigned.
-    * Publish your MATLAB script with the defined state-space models as a PDF. Follow this [guide](https://www.mathworks.com/help/matlab/matlab_prog/publishing-matlab-code.html) to see how to.
-* **Section 2:** Mathematical Modeling of the BalBot 
-    * Answer the three questions above. Redraw the free-body diagrams and derive the equations with variables clearly labelled.
-* **Conclusion:** a few sentences concluding the report explaining the goals, what you learned, and any other conclusions. -->
+![chassis](../media/motor.jpg) -->
