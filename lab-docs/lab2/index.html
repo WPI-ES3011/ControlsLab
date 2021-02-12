@@ -69,6 +69,20 @@
             
     <li class="toctree-l3"><a href="#lab_2_mathematical_modeling_i">Lab 2: Mathematical Modeling I</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#introduction">Introduction</a></li>
+        
+            <li><a class="toctree-l4" href="#1_mathematical_modeling_of_basic_dynamical_systems">1. Mathematical Modeling of Basic Dynamical Systems</a></li>
+        
+            <li><a class="toctree-l4" href="#2_mathematical_modeling_of_the_balbot">2. Mathematical Modeling of the BalBot</a></li>
+        
+            <li><a class="toctree-l4" href="#3_testing_balbot_imu_calibration">3. Testing Balbot IMU Calibration</a></li>
+        
+            <li><a class="toctree-l4" href="#what_to_submit">What to Submit:</a></li>
+        
+        </ul>
+    
 
     </ul>
                 </li>
@@ -131,7 +145,6 @@
 <!-- ###### Description
 * Learn how to develop mathematical models of physical dynamic systems. This would include:
     * Mass-spring-damper
-    * ~~RLC circuit~~
     * DC motor
     * Self-balancing robot
 
@@ -139,53 +152,113 @@
 * Report showing a summary of exercises completed for MATLAB and Simulink.
     * MATLAB code showing the state-space model of each dynamic systems -->
 
-<!-- 
-!!! note 
-    We need to experimentally obtain the dynamic parameters of the self-balancing robot
-     -->
+<!-- ![work_in_progress](../media/wip.jpg) -->
 
-<p><img alt="work_in_progress" src="../media/wip.jpg" /></p>
-<!-- #### Introduction
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<p>Welcome to the second session of the ES3011 experimental labs. In this lab, we focus on mathematical modeling. The central question is <em>"How do describe/model our physical system mathematically to be able to anaylze its behavior?"</em></p>
+<p>We will cover three sections in this lab:</p>
+<ol>
+<li>
+<p>Mathematical modeling of basic dynamical systems</p>
+</li>
+<li>
+<p>Mathematical modeling of of the BalBot (self-balancing robot)</p>
+</li>
+<li>
+<p>Testing Balbot IMU Calibration</p>
+</li>
+</ol>
+<h5 id="learning_outcomes">Learning Outcomes<a class="headerlink" href="#learning_outcomes" title="Permanent link">&para;</a></h5>
+<p>Our goal at the end of this labs is that you should be able to:</p>
+<ul>
+<li>Understand and describe/model physical dynamic systems mathematically using differential equations</li>
+<li>Convert the differential equations to state-space model form by hand and using MATLAB functionality</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="1_mathematical_modeling_of_basic_dynamical_systems">1. Mathematical Modeling of Basic Dynamical Systems<a class="headerlink" href="#1_mathematical_modeling_of_basic_dynamical_systems" title="Permanent link">&para;</a></h4>
+<p>In this section, you will develop mathematical models for basic dynamical systems considered in control systems such as the mass-spring-damper and the DC motor. These models will then be put into state-space representation which will be used in future lab sessions for simulation and analysis.</p>
+<h5 id="instructions">Instructions:<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h5>
+<p>In this lab <a href="../documents/Lab2.pdf">instruction sheet</a>,</p>
+<ul>
+<li>Review the MATLAB Intro section</li>
+<li>Complete problems I (Mass-spring-damper) and IV (Motor position)</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="2_mathematical_modeling_of_the_balbot">2. Mathematical Modeling of the BalBot<a class="headerlink" href="#2_mathematical_modeling_of_the_balbot" title="Permanent link">&para;</a></h4>
+<p><img alt="robot" src="../media/robot.png" /></p>
+<p>In this section, we will derive the mathematical model for the Balbot.</p>
+<h5 id="instructions_1">Instructions:<a class="headerlink" href="#instructions_1" title="Permanent link">&para;</a></h5>
+<p>In this lab <a href="../documents/ES3011_LAB2.pdf">instruction sheet</a>,</p>
+<ul>
+<li>You are required to answer all 5 questions in the sheet and record your solutions in your report.</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="3_testing_balbot_imu_calibration">3. Testing Balbot IMU Calibration<a class="headerlink" href="#3_testing_balbot_imu_calibration" title="Permanent link">&para;</a></h4>
+<p>In Lab 1, we completed the IMU calibration process to ensure the robot get accurate feedback from the IMU sensor about its orientation. In this section, we will now test the calibration process by reading off the robot's pitch values on MATLAB using serial comm.</p>
+<h5 id="instructions_2">Instructions:<a class="headerlink" href="#instructions_2" title="Permanent link">&para;</a></h5>
+<p><strong>1. Update your Balbot software:</strong></p>
+<ul>
+<li>To update the Balbot software on your local PC, please run the <code>git pull</code> command in the directory where you cloned the WPI-ES3011 repository</li>
+</ul>
+<!-- ``` shell
+$ git pull
+``` -->
 
-Welcome to the second session of the ES3011 experimental labs. In this lab, we focus on mathematical modeling. The central question is *"How do describe/model our physical system mathematically to be able to anaylze its behavior?"*
+<p><strong>2. Build and upload code to the Balbot:</strong></p>
+<ul>
+<li>First, connect the robot to your PC via USB.</li>
+<li>Start up VS Code and, following the procedure in Lab 1, build and upload the code to the robot.</li>
+</ul>
+<p><strong>3. Test the IMU calibration on MATLAB:</strong></p>
+<ul>
+<li>Next step is to start up MATLAB. </li>
+<li>Make sure you navigate to directory where you have saved the WPI-ES3011 Lab software</li>
+<li>Run the following command in your MATLAB command window (instead of <team-ID> add your actual team ID, e.g. 'Team 1')</li>
+</ul>
+<pre><code class="matlab">&gt;&gt; balbot_serial(&lt;team-ID&gt;)
+</code></pre>
 
-We will cover two sections in this lab:
+<ul>
+<li>Make sure you observe that the pitch value changes correctly as you manually move the robot about the X-axis.</li>
+<li>Take screen shots of your MATLAB output (similar to Fig. 2) when the robot is in three positions:<ul>
+<li>Upright position (pitch = ~0 rad)</li>
+<li>Leaning backward (as far as you can go)</li>
+<li>Leaning forward (as far as you can go)</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<p><em>Fig 1:</em>
+<img alt="lab2-command" src="../media/lab2-command.png" /></p>
+<p><em>Fig 2:</em>
+<img alt="lab2-result" src="../media/lab2-result.png" /></p>
+<hr />
+<p><br></p>
+<h4 id="what_to_submit">What to Submit:<a class="headerlink" href="#what_to_submit" title="Permanent link">&para;</a></h4>
+<p>Prepare a report which contains the following:</p>
+<ul>
+<li><strong>Introduction:</strong> a few sentences to introduce the topic of the lab</li>
+<li><strong>Section 1:</strong> Mathematical Modeling of Basic Dynamical Systems (MATLAB)<ul>
+<li>Include free-body diagram and/or equations of motion for the two systems assigned.</li>
+<li>Publish your MATLAB script with the defined state-space models as a PDF. Follow this <a href="https://www.mathworks.com/help/matlab/matlab_prog/publishing-matlab-code.html">guide</a> to see how to.</li>
+</ul>
+</li>
+<li><strong>Section 2:</strong> Mathematical Modeling of the BalBot <ul>
+<li>Present your answers to the five questions in your report. Make sure you include a free-body diagram of the robot in your report.</li>
+</ul>
+</li>
+<li><strong>Section 3:</strong> Test the IMU calibration on MATLAB<ul>
+<li>Show the three MATLAB screen shots as described above.</li>
+</ul>
+</li>
+<li><strong>Conclusion:</strong> a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.</li>
+</ul>
+<!-- We can take a simplified approach to the modeling problem by decomposing the BalBot system into sub-components. This is a convenient assumption to simplify the modeling task. The sub-components are: (1) the robot wheels, (2) the motors, (3) robot chassis.  -->
 
-1. Mathematical modeling of basic dynamical systems
-
-2. Mathematical modeling of of the BalBot (self-balancing robot)
-
-##### Learning Outcomes
-Our goal at the end of this labs is that you should be able to:
-
-* Understand and describe/model physical dynamic systems mathematically using differential equations
-* Convert the differential equations to state-space model form by hand and using MATLAB functionality
-
-
-
-*** 
-<br>
-
-#### 1. Mathematical Modeling of Basic Dynamical Systems
-
-In this section, you will develop mathematical models for basic dynamical systems considered in control systems such as the mass-spring-damper and the DC motor. These models will then be put into state-space representation which will be used in future lab sessions for simulation and analysis.
-
-##### Instructions:
-In this lab [instruction sheet](../documents/Lab2.pdf),
-
-* Review the MATLAB Intro section
-* Complete problems I (Mass-spring-damper) and IV (Motor position)
-
-*** 
-<br>
-
-#### 2. Mathematical Modeling of the BalBot
-
-![robot](../media/robot.png)
-
-In this section, we will derive the mathematical model for the Balbot. We can take a simplified approach to the modeling problem by decomposing the BalBot system into sub-components. This is a convenient assumption to simplify the modeling task. The sub-components are: (1) the robot wheels, (2) the motors, (3) robot chassis. 
-
-###### Preliminaries: Review the equivalent free-body diagram for the complete system
+<!-- ###### Preliminaries: Review the equivalent free-body diagram for the complete system
 
 Following the system decomposition, we can draw a simplified representation of the robot as above. We have made a few assumptions:
 
@@ -229,20 +302,7 @@ Finally, you need to derive an equation which relates the torque generated by th
 
 Please refer to the lab [instruction sheet](../documents/Lab2.pdf) for a reminder on the equations describing a DC motor.
 
-![chassis](../media/motor.jpg)
-
-
-
-#### What to Submit:
-Prepare a report which contains the following:
-
-* **Introduction:** a few sentences to introduce the topic of the lab
-* **Section 1:** Mathematical Modeling of Basic Dynamical Systems (MATLAB)
-    * Include free-body diagram and/or equations of motion for the two systems assigned.
-    * Publish your MATLAB script with the defined state-space models as a PDF. Follow this [guide](https://www.mathworks.com/help/matlab/matlab_prog/publishing-matlab-code.html) to see how to.
-* **Section 2:** Mathematical Modeling of the BalBot 
-    * Answer the three questions above. Redraw the free-body diagrams and derive the equations with variables clearly labelled.
-* **Conclusion:** a few sentences concluding the report explaining the goals, what you learned, and any other conclusions. -->
+![chassis](../media/motor.jpg) -->
               
             </div>
           </div>
