@@ -77,8 +77,6 @@
         
             <li><a class="toctree-l4" href="#2_mathematical_modeling_of_the_balbot">2. Mathematical Modeling of the BalBot</a></li>
         
-            <li><a class="toctree-l4" href="#3_testing_balbot_imu_calibration">3. Testing Balbot IMU Calibration</a></li>
-        
             <li><a class="toctree-l4" href="#what_to_submit">What to Submit:</a></li>
         
         </ul>
@@ -164,10 +162,9 @@
 <li>
 <p>Mathematical modeling of of the BalBot (self-balancing robot)</p>
 </li>
-<li>
-<p>Testing Balbot IMU Calibration</p>
-</li>
 </ol>
+<!-- 3. Testing Balbot IMU Calibration -->
+
 <h5 id="learning_outcomes">Learning Outcomes<a class="headerlink" href="#learning_outcomes" title="Permanent link">&para;</a></h5>
 <p>Our goal at the end of this labs is that you should be able to:</p>
 <ul>
@@ -196,47 +193,53 @@
 </ul>
 <hr />
 <p><br></p>
-<h4 id="3_testing_balbot_imu_calibration">3. Testing Balbot IMU Calibration<a class="headerlink" href="#3_testing_balbot_imu_calibration" title="Permanent link">&para;</a></h4>
-<p>In Lab 1, we completed the IMU calibration process to ensure the robot get accurate feedback from the IMU sensor about its orientation. In this section, we will now test the calibration process by reading off the robot's pitch values on MATLAB using serial comm.</p>
-<h5 id="instructions_2">Instructions:<a class="headerlink" href="#instructions_2" title="Permanent link">&para;</a></h5>
-<p><strong>1. Update your Balbot software:</strong></p>
-<ul>
-<li>To update the Balbot software on your local PC, please run the <code>git pull</code> command in the directory where you cloned the WPI-ES3011 repository</li>
-</ul>
+<!-- #### 3. Testing Balbot IMU Calibration
+
+In Lab 1, we completed the IMU calibration process to ensure the robot get accurate feedback from the IMU sensor about its orientation. In this section, we will now test the calibration process by reading off the robot's pitch values on MATLAB using serial comm.
+
+##### Instructions:
+
+**1. Update your Balbot software:**
+
+- To update the Balbot software on your local PC, please run the `git pull` command in the directory where you cloned the WPI-ES3011 repository
+
 <!-- ``` shell
 $ git pull
 ``` -->
 
-<p><strong>2. Build and upload code to the Balbot:</strong></p>
-<ul>
-<li>First, connect the robot to your PC via USB.</li>
-<li>Start up VS Code and, following the procedure in Lab 1, build and upload the code to the robot.</li>
-</ul>
-<p><strong>3. Test the IMU calibration on MATLAB:</strong></p>
-<ul>
-<li>Next step is to start up MATLAB. </li>
-<li>Make sure you navigate to directory where you have saved the WPI-ES3011 Lab software</li>
-<li>Run the following command in your MATLAB command window (instead of <team-ID> add your actual team ID, e.g. 'Team 1')</li>
-</ul>
+<!-- **2. Build and upload code to the Balbot:**
+
+- First, connect the robot to your PC via USB.
+- Start up VS Code and, following the procedure in Lab 1, build and upload the code to the robot. -->
+
+<!-- **3. Test the IMU calibration on MATLAB:**
+
+- Next step is to start up MATLAB. 
+- Make sure you navigate to directory where you have saved the WPI-ES3011 Lab software
+- Run the following command in your MATLAB command window (instead of <team-ID> add your actual team ID, e.g. 'Team 1')
+
 <pre><code class="matlab">&gt;&gt; balbot_serial(&lt;team-ID&gt;)
 </code></pre>
 
-<ul>
-<li>Make sure you observe that the pitch value changes correctly as you manually move the robot about the X-axis.</li>
-<li>Take screen shots of your MATLAB output (similar to Fig. 2) when the robot is in three positions:<ul>
-<li>Upright position (pitch = ~0 rad)</li>
-<li>Leaning backward (as far as you can go)</li>
-<li>Leaning forward (as far as you can go)</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<p><em>Fig 1:</em>
-<img alt="lab2-command" src="../media/lab2-command.png" /></p>
-<p><em>Fig 2:</em>
-<img alt="lab2-result" src="../media/lab2-result.png" /></p>
-<hr />
-<p><br></p>
+
+- Make sure you observe that the pitch value changes correctly as you manually move the robot about the X-axis.
+- Take screen shots of your MATLAB output (similar to Fig. 2) when the robot is in three positions:
+    - Upright position (pitch = ~0 rad)
+    - Leaning backward (as far as you can go)
+    - Leaning forward (as far as you can go) -->
+
+<!-- <br>
+
+*Fig 1:*
+![lab2-command](../media/lab2-command.png)
+
+*Fig 2:*
+![lab2-result](../media/lab2-result.png)
+
+
+*** 
+<br> -->
+
 <h4 id="what_to_submit">What to Submit:<a class="headerlink" href="#what_to_submit" title="Permanent link">&para;</a></h4>
 <p>Prepare a report which contains the following:</p>
 <ul>
@@ -250,10 +253,11 @@ $ git pull
 <li>Present your answers to the five questions in your report. Make sure you include a free-body diagram of the robot in your report.</li>
 </ul>
 </li>
-<li><strong>Section 3:</strong> Test the IMU calibration on MATLAB<ul>
-<li>Show the three MATLAB screen shots as described above.</li>
 </ul>
-</li>
+<!-- * **Section 3:** Test the IMU calibration on MATLAB
+    * Show the three MATLAB screen shots as described above. -->
+
+<ul>
 <li><strong>Conclusion:</strong> a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.</li>
 </ul>
 <!-- We can take a simplified approach to the modeling problem by decomposing the BalBot system into sub-components. This is a convenient assumption to simplify the modeling task. The sub-components are: (1) the robot wheels, (2) the motors, (3) robot chassis.  -->

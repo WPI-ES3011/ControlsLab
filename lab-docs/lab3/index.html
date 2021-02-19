@@ -73,6 +73,20 @@
             
     <li class="toctree-l3"><a href="#lab_3_laplace_transforms_mathematical_modeling_ii">Lab 3: Laplace Transforms &amp; Mathematical Modeling II</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#introduction">Introduction</a></li>
+        
+            <li><a class="toctree-l4" href="#1_laplace_and_inverse_laplace_transforms_for_basic_dynamical_systems">1. Laplace and Inverse Laplace Transforms for Basic Dynamical Systems</a></li>
+        
+            <li><a class="toctree-l4" href="#2_laplace_transforms_for_the_balbot_self-balancing_robot">2. Laplace Transforms for the BalBot (Self-balancing Robot)</a></li>
+        
+            <li><a class="toctree-l4" href="#3_testing_balbot_imu_calibration">3. Testing Balbot IMU Calibration</a></li>
+        
+            <li><a class="toctree-l4" href="#what_to_submit">What to Submit:</a></li>
+        
+        </ul>
+    
 
     </ul>
                 </li>
@@ -128,7 +142,8 @@
             <div class="section">
               
                 <h1 id="lab_3_laplace_transforms_mathematical_modeling_ii">Lab 3: Laplace Transforms &amp; Mathematical Modeling II<a class="headerlink" href="#lab_3_laplace_transforms_mathematical_modeling_ii" title="Permanent link">&para;</a></h1>
-<p><img alt="work_in_progress" src="../media/wip.jpg" /></p>
+<!-- ![work_in_progress](../media/wip.jpg) -->
+
 <!-- ### Description:
 * Learn how to perform laplace transforms on the physical dynamic systems:
     * Mass-spring-damper
@@ -137,26 +152,115 @@
     * Self-balancing robot
 
 ### What to Submit:
-* Report showing a summary of exercises completed by hand as well as with MATLAB.
+* Report showing a summary of exercises completed by hand as well as with MATLAB. -->
 
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<p>Welcome to the third session of the ES3011 experimental labs. In this lab, we focus on laplace transformation. The central question is <em>"How do we simplify our system modeling and analysis by converting our equations from time-domain (differential equations) to s-domain (algebraic equations)?"</em></p>
+<p>We will cover three sections in this lab:</p>
+<ol>
+<li>
+<p>Laplace and inverse laplace transforms for basic dynamical systems</p>
+</li>
+<li>
+<p>Laplace transforms for the BalBot (self-balancing robot)</p>
+</li>
+<li>
+<p>Testing Balbot IMU Calibration</p>
+</li>
+</ol>
+<h5 id="learning_outcomes">Learning Outcomes<a class="headerlink" href="#learning_outcomes" title="Permanent link">&para;</a></h5>
+<p>Our goal at the end of this labs is that you should be able to:</p>
+<ul>
+<li>Understand how to perform laplace and inverse laplace transformation on basic dynamic systems</li>
+<li>Understand how to perform laplace for real robotic systems (the BalBot)</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="1_laplace_and_inverse_laplace_transforms_for_basic_dynamical_systems">1. Laplace and Inverse Laplace Transforms for Basic Dynamical Systems<a class="headerlink" href="#1_laplace_and_inverse_laplace_transforms_for_basic_dynamical_systems" title="Permanent link">&para;</a></h4>
+<p>In this section, you will find the frequency-domain representations of basic dynamical systems using the Laplace transformation. This representation would be instrumental in performing transfer function analysis in future lab sessions.</p>
+<h5 id="instructions">Instructions:<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h5>
+<p>In this lab <a href="../documents/Lab3.pdf">instruction sheet</a>,</p>
+<ul>
+<li>Complete the <strong>Laplace and Inverse Laplace Transform Problems</strong> section</li>
+<li>Complete problems I (Mass-spring-damper) and IV (Motor position)</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="2_laplace_transforms_for_the_balbot_self-balancing_robot">2. Laplace Transforms for the BalBot (Self-balancing Robot)<a class="headerlink" href="#2_laplace_transforms_for_the_balbot_self-balancing_robot" title="Permanent link">&para;</a></h4>
+<!-- ![robot](../media/robot.png) -->
 
+<p>In this section, we will build up on the differential equations derived in Lab 2. Given the differential equations, we will apply laplace transforms to convert the BalBot system model from time-domain to s-domain.</p>
+<h5 id="instructions_1">Instructions:<a class="headerlink" href="#instructions_1" title="Permanent link">&para;</a></h5>
+<p>In this lab <a href="../documents/ES3011_LAB2.pdf">instruction sheet</a>,</p>
+<ul>
+<li>You should have three (3) equations from Q5 which describe the full system dynamic model.</li>
+<li>You are required to derive the laplace transform of those equations by hand.</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="3_testing_balbot_imu_calibration">3. Testing Balbot IMU Calibration<a class="headerlink" href="#3_testing_balbot_imu_calibration" title="Permanent link">&para;</a></h4>
+<p>In Lab 1, we completed the IMU calibration process to ensure the robot get accurate feedback from the IMU sensor about its orientation. In this section, we will now test the calibration process by reading off the robot's pitch values on MATLAB using serial comm.</p>
+<h5 id="instructions_2">Instructions:<a class="headerlink" href="#instructions_2" title="Permanent link">&para;</a></h5>
+<p><strong>1. Update your Balbot software:</strong></p>
+<ul>
+<li>To update the Balbot software on your local PC, please run the <code>git pull</code> command in the directory where you cloned the WPI-ES3011 repository</li>
+</ul>
+<!-- ``` shell
+$ git pull
+``` -->
 
+<p><strong>2. Build and upload code to the Balbot:</strong></p>
+<ul>
+<li>First, connect the robot to your PC via USB.</li>
+<li>Start up VS Code and, following the procedure in Lab 1, build and upload the code to the robot.</li>
+</ul>
+<p><strong>3. Test the IMU calibration on MATLAB:</strong></p>
+<ul>
+<li>Next step is to start up MATLAB. </li>
+<li>Make sure you navigate to directory where you have saved the WPI-ES3011 Lab software</li>
+<li>Run the following command in your MATLAB command window (instead of <team-ID> add your actual team ID, e.g. 'Team 1')</li>
+</ul>
+<pre><code class="matlab">&gt;&gt; balbot_serial(&lt;team-ID&gt;)
+</code></pre>
 
-#### Introduction
-
-Welcome to the second session of the ES3011 experimental labs. In this lab, we focus on mathematical modeling. The central question is *"How do describe/model our physical system mathematically to be able to anaylze its behavior?"*
-
-We will cover two sections in this lab:
-
-1. Mathematical modeling of basic dynamical systems
-
-2. Mathematical modeling of self-balancing robot system
-
-##### Learning Outcomes
-Our goal at the end of this labs is that you should be able to:
-
-* Understand and describe/model physical dynamic systems mathematically using differential equations
-* Convert the differential equations to state-space model form by hand and using MATLAB functionality -->
+<ul>
+<li>Make sure you observe that the pitch value changes correctly as you manually move the robot about the X-axis.</li>
+<li>Take screen shots of your MATLAB output (similar to Fig. 2) when the robot is in three positions:<ul>
+<li>Upright position (pitch = ~0 rad)</li>
+<li>Leaning backward (as far as you can go)</li>
+<li>Leaning forward (as far as you can go)</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<p><em>Fig 1:</em>
+<img alt="lab2-command" src="../media/lab2-command.png" /></p>
+<p><em>Fig 2:</em>
+<img alt="lab2-result" src="../media/lab2-result.png" /></p>
+<hr />
+<p><br></p>
+<h4 id="what_to_submit">What to Submit:<a class="headerlink" href="#what_to_submit" title="Permanent link">&para;</a></h4>
+<p>Prepare a report which contains the following:</p>
+<ul>
+<li><strong>Introduction:</strong> a few sentences to introduce the topic of the lab</li>
+<li><strong>Section 1:</strong> Laplace and Inverse Laplace Transforms for Basic Dynamical Systems<ul>
+<li>Present your solution to each of the questions in that section.</li>
+</ul>
+</li>
+<li><strong>Section 2:</strong> Laplace Transforms for the BalBot (Self-balancing Robot)<ul>
+<li>Present your solution.</li>
+</ul>
+</li>
+<li><strong>Section 3:</strong> Test the IMU calibration on MATLAB<ul>
+<li>Show the three MATLAB screen shots as described above.</li>
+</ul>
+</li>
+<li><strong>Conclusion:</strong> a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you completed the IMU calibration test in Lab 2, <strong>kindly copy and paste your solution in this lab report</strong> as the grades for this section would count in Lab 3 alone and not in Lab 2.</p>
+</div>
               
             </div>
           </div>
