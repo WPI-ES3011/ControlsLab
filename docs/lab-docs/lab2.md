@@ -23,7 +23,7 @@ We will cover three sections in this lab:
 
 2. Mathematical modeling of of the BalBot (self-balancing robot)
 
-3. Testing Balbot IMU Calibration
+<!-- 3. Testing Balbot IMU Calibration -->
 
 ##### Learning Outcomes
 Our goal at the end of this labs is that you should be able to:
@@ -63,7 +63,7 @@ In this lab [instruction sheet](../documents/ES3011_LAB2.pdf),
 *** 
 <br>
 
-#### 3. Testing Balbot IMU Calibration
+<!-- #### 3. Testing Balbot IMU Calibration
 
 
 In Lab 1, we completed the IMU calibration process to ensure the robot get accurate feedback from the IMU sensor about its orientation. In this section, we will now test the calibration process by reading off the robot's pitch values on MATLAB using serial comm.
@@ -78,13 +78,13 @@ In Lab 1, we completed the IMU calibration process to ensure the robot get accur
 $ git pull
 ``` -->
 
-**2. Build and upload code to the Balbot:**
+<!-- **2. Build and upload code to the Balbot:**
 
 - First, connect the robot to your PC via USB.
-- Start up VS Code and, following the procedure in Lab 1, build and upload the code to the robot.
+- Start up VS Code and, following the procedure in Lab 1, build and upload the code to the robot. --> 
 
 
-**3. Test the IMU calibration on MATLAB:**
+<!-- **3. Test the IMU calibration on MATLAB:**
 
 - Next step is to start up MATLAB. 
 - Make sure you navigate to directory where you have saved the WPI-ES3011 Lab software
@@ -97,10 +97,10 @@ $ git pull
 - Take screen shots of your MATLAB output (similar to Fig. 2) when the robot is in three positions:
     - Upright position (pitch = ~0 rad)
     - Leaning backward (as far as you can go)
-    - Leaning forward (as far as you can go)
+    - Leaning forward (as far as you can go) -->
 
 
-<br>
+<!-- <br>
 
 *Fig 1:*
 ![lab2-command](../media/lab2-command.png)
@@ -110,7 +110,7 @@ $ git pull
 
 
 *** 
-<br>
+<br> -->
 
 
 #### What to Submit:
@@ -122,8 +122,9 @@ Prepare a report which contains the following:
     * Publish your MATLAB script with the defined state-space models as a PDF. Follow this [guide](https://www.mathworks.com/help/matlab/matlab_prog/publishing-matlab-code.html) to see how to.
 * **Section 2:** Mathematical Modeling of the BalBot 
     * Present your answers to the five questions in your report. Make sure you include a free-body diagram of the robot in your report.
-* **Section 3:** Test the IMU calibration on MATLAB
-    * Show the three MATLAB screen shots as described above.
+    
+<!-- * **Section 3:** Test the IMU calibration on MATLAB
+    * Show the three MATLAB screen shots as described above. -->
 * **Conclusion:** a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.
 
 
