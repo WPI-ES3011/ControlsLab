@@ -53,7 +53,7 @@ In this section, we will build up on the s-domain equations derived by applying 
 2. Derive the state-space representation of the system.
     - For this, we'll use only the first two differential equations derived previously. Your equations should be in the form below (replace the alpha and beta coefficients with the correct variables).
 
-    ![equations](../media/equ1.png)
+    ![equations](../media/equ.png)
 
     - Please use the constants defined below for variables
 
@@ -72,7 +72,7 @@ In this section, we will build up on the s-domain equations derived by applying 
 !!! note 
     As Lab 3 submission is no passed, we have provided the solution to the differential equation coefficients for the Balbot below to help you accurately complete this Lab. Please use this as you complete Section 2.
     <br>
-    
+
     ![solutions](../media/solutions.png)
 
 #### What to Submit:
