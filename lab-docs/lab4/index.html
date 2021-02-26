@@ -77,6 +77,18 @@
             
     <li class="toctree-l3"><a href="#lab_4_transfer_functions_transient_response">LAB 4: Transfer Functions &amp; Transient Response</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#introduction">Introduction</a></li>
+        
+            <li><a class="toctree-l4" href="#1_transient_response_analysis_for_basic_dynamical_systems">1. Transient Response Analysis for Basic Dynamical Systems</a></li>
+        
+            <li><a class="toctree-l4" href="#2_transient_response_analysis_for_the_balbot_self-balancing_robot">2. Transient Response Analysis for the BalBot (Self-balancing Robot)</a></li>
+        
+            <li><a class="toctree-l4" href="#what_to_submit">What to Submit:</a></li>
+        
+        </ul>
+    
 
     </ul>
                 </li>
@@ -128,18 +140,84 @@
             <div class="section">
               
                 <h1 id="lab_4_transfer_functions_transient_response">LAB 4: Transfer Functions &amp; Transient Response<a class="headerlink" href="#lab_4_transfer_functions_transient_response" title="Permanent link">&para;</a></h1>
-<!-- ### Description:
-* Learn how to create transfer functions for the physical dynamic systems:
-    * Mass-spring-damper
-    * DC motor
-    * Self-balancing robot
-* Perform open-loop step response (transient response) for each system, especially the self-balancing robot
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<p>Welcome to the fourth session of the ES3011 experimental labs. </p>
+<p>In this lab, we focus on transient response analysis. The goal is there is to study the time response of the system to different test signals. This analysis provides insight into the response characteristics of the system and enable controller design.</p>
+<p>We will cover three sections in this lab:</p>
+<ol>
+<li>
+<p>Transient response analysis for basic dynamical systems</p>
+</li>
+<li>
+<p>Transient response analysis for the BalBot (self-balancing robot)</p>
+</li>
+</ol>
+<h5 id="learning_outcomes">Learning Outcomes<a class="headerlink" href="#learning_outcomes" title="Permanent link">&para;</a></h5>
+<p>Our goal at the end of this labs is that you should be able to:</p>
+<ul>
+<li>Understand how to perform transient response analyses on basic dynamical systems</li>
+<li>Understand how to perform transient response analyses for real robotic systems (the BalBot)</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="1_transient_response_analysis_for_basic_dynamical_systems">1. Transient Response Analysis for Basic Dynamical Systems<a class="headerlink" href="#1_transient_response_analysis_for_basic_dynamical_systems" title="Permanent link">&para;</a></h4>
+<p>In this section, you will perform transient response analysis on the basic dynamical systems previously considered: (1) Mass-Spring-Damper, (2) Motor Position.</p>
+<h5 id="instructions">Instructions:<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h5>
+<p>In this lab <a href="../documents/Lab4.pdf">instruction sheet</a>,</p>
+<ul>
+<li>Complete problems I (Mass-spring-damper) and IV (Motor position) in the MATLAB section.</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="2_transient_response_analysis_for_the_balbot_self-balancing_robot">2. Transient Response Analysis for the BalBot (Self-balancing Robot)<a class="headerlink" href="#2_transient_response_analysis_for_the_balbot_self-balancing_robot" title="Permanent link">&para;</a></h4>
+<p><img alt="robot" src="../media/robot.png" /></p>
+<p>In this section, we will build up on the s-domain equations derived by applying laplace transformation in Lab 3. </p>
+<!-- Given the differential equations, we will apply laplace transforms to convert the BalBot system model from time-domain to s-domain. -->
 
-### What to Submit:
-* Report showing a summary of exercises completed by hand as well as with MATLAB.
-    * MATLAB generated plot of the transient response of each dynamic systems -->
-
-<p><img alt="work_in_progress" src="../media/wip.jpg" /></p>
+<h5 id="instructions_1">Instructions:<a class="headerlink" href="#instructions_1" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p>Simplify your three differential equations by grouping the constants based on the table below:</p>
+<p><img alt="table1" src="../media/equation-constants.png" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Derive the state-space representation of the system.</p>
+<ul>
+<li>For this, we'll use only the first two differential equations derived previously. Your equations should be in the form below.</li>
+</ul>
+<p><img alt="equations" src="../media/equ1.png" /></p>
+<ul>
+<li>Please use the constants defined below for variables</li>
+</ul>
+<p><img alt="equations" src="../media/constants.png" /></p>
+<ul>
+<li>Hint: The state variables should be pitch angle, pitch velocity and linear velocity. The input should be sum of voltages to motors and output should be </li>
+</ul>
+<p><br></p>
+</li>
+<li>
+<p>Using your state-space model defined above, please obtain the transient response for unit-impulse, unit-step and unit-ramp functions and report the values for peak time, settling time, rise time and maximum overshoot.</p>
+</li>
+</ol>
+<hr />
+<p><br></p>
+<h4 id="what_to_submit">What to Submit:<a class="headerlink" href="#what_to_submit" title="Permanent link">&para;</a></h4>
+<p>Prepare a report which contains the following:</p>
+<ul>
+<li><strong>Introduction:</strong> a few sentences to introduce the topic of the lab</li>
+<li><strong>Section 1:</strong> Transient Response Analysis for Basic Dynamical Systems<ul>
+<li>Include plots for each of the transient response analysis</li>
+<li>Include values of metrics obtained (e.g. rise time, etc.)</li>
+</ul>
+</li>
+<li><strong>Section 2:</strong> Transient Response Analysis for the BalBot (Self-balancing Robot)<ul>
+<li>Include plots for each of the transient response analysis</li>
+<li>Include values of metrics obtained (e.g. rise time, etc.)</li>
+</ul>
+</li>
+<li><strong>Conclusion:</strong> a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.</li>
+</ul>
               
             </div>
           </div>
