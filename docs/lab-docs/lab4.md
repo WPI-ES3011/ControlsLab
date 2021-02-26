@@ -57,7 +57,7 @@ In this section, we will build up on the s-domain equations derived by applying 
 
     - Please use the constants defined below for variables
 
-    ![equations](../media/constants.png)
+    ![constants](../media/constants.png)
 
     - Hint: The state variables should be pitch angle, pitch velocity and linear velocity. The **input** should be *sum of voltages to motors* and **outputs** should be *pitch angle and linear velocity*.
 
@@ -68,6 +68,12 @@ In this section, we will build up on the s-domain equations derived by applying 
 
 *** 
 <br>
+
+!!! note 
+    As Lab 3 submission is no passed, we have provided the solution to the differential equation coefficients for the Balbot below to help you accurately complete this Lab. Please use this as you complete Section 2.
+    <br>
+    
+    ![solutions](../media/solutions.png)
 
 #### What to Submit:
 Prepare a report which contains the following:
