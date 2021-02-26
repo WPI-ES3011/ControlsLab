@@ -51,7 +51,7 @@ In this section, we will build up on the s-domain equations derived by applying 
     <br>
 
 2. Derive the state-space representation of the system.
-    - For this, we'll use only the first two differential equations derived previously. Your equations should be in the form below.
+    - For this, we'll use only the first two differential equations derived previously. Your equations should be in the form below (replace the alpha and beta coefficients with the correct variables).
 
     ![equations](../media/equ1.png)
 
@@ -59,7 +59,7 @@ In this section, we will build up on the s-domain equations derived by applying 
 
     ![equations](../media/constants.png)
 
-    - Hint: The state variables should be pitch angle, pitch velocity and linear velocity. The input should be sum of voltages to motors and output should be 
+    - Hint: The state variables should be pitch angle, pitch velocity and linear velocity. The **input** should be *sum of voltages to motors* and **outputs** should be *pitch angle and linear velocity*.
 
     <br>
 
