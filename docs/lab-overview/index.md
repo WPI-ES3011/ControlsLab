@@ -20,7 +20,7 @@ In this lab, you will get to hands-on experience learning fundamental control sy
 |  2  | Mathematical Modeling I     |  Feb. 12
 |  3  | Laplace Transforms & Mathematical Modeling II     |  Feb. 19
 |  4  | Transfer Functions & Transient Response   |  Feb. 26 *
-|  5  | Control Design: P, PI, PID Controllers     |    Mar. 5
+|  5  | Controller Design     |    Mar. 5
 |  6  | Stability Analysis & Frequency Response    |    Mar. 12
 
 <!-- |  7  | Controller Tuning & Final Competition   |   Mar. 17 -->
