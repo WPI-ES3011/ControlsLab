@@ -79,7 +79,19 @@
     <a class="current" href="./">Lab 5</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#lab_5_control_design_p_pi_pid_controllers">LAB 5: Control Design: P, PI, PID Controllers</a></li>
+    <li class="toctree-l3"><a href="#lab_5_controller_design">LAB 5: Controller Design</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#introduction">Introduction</a></li>
+        
+            <li><a class="toctree-l4" href="#1_pid_control_design_for_basic_dynamical_systems">1. PID Control Design for Basic Dynamical Systems</a></li>
+        
+            <li><a class="toctree-l4" href="#2_control_design_for_the_balbot_self-balancing_robot_using_state_feedback">2. Control Design for the BalBot (self-balancing robot) using State Feedback</a></li>
+        
+            <li><a class="toctree-l4" href="#what_to_submit">What to Submit:</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -127,17 +139,162 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="lab_5_control_design_p_pi_pid_controllers">LAB 5: Control Design: P, PI, PID Controllers<a class="headerlink" href="#lab_5_control_design_p_pi_pid_controllers" title="Permanent link">&para;</a></h1>
-<!-- ### Description:
-* Learn how to develop linear feedback controllers for the self-balancing robot
-* Perform closed-loop step response (transient response) for the self-balancing robot
-
-### What to Submit:
-* Report showing a summary of exercises completed by hand as well as with MATLAB.
-    * MATLAB generated plot of the transient response for the self-balancing robot
- -->
-
-<p><img alt="work_in_progress" src="../media/wip.jpg" /></p>
+                <h1 id="lab_5_controller_design">LAB 5: Controller Design<a class="headerlink" href="#lab_5_controller_design" title="Permanent link">&para;</a></h1>
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<p>Welcome to the fifth session of the ES3011 experimental labs. </p>
+<p>In this lab, we will learn how to design feedback controllers to achieve desired system performance.</p>
+<p>We will cover three sections in this lab:</p>
+<ol>
+<li>
+<p>PID control design for basic dynamical systems</p>
+</li>
+<li>
+<p>Control design for the BalBot (self-balancing robot) using state feedback</p>
+</li>
+</ol>
+<h5 id="learning_outcomes">Learning Outcomes<a class="headerlink" href="#learning_outcomes" title="Permanent link">&para;</a></h5>
+<p>Our goal at the end of this labs is that you should be able to:</p>
+<ul>
+<li>Understand how to design controllers for basic dynamical systems using P and PID control</li>
+<li>Understand how to design controllers for real robotic systems (the BalBot) using state feedback</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="1_pid_control_design_for_basic_dynamical_systems">1. PID Control Design for Basic Dynamical Systems<a class="headerlink" href="#1_pid_control_design_for_basic_dynamical_systems" title="Permanent link">&para;</a></h4>
+<p>In this section, you will design feedback controllers for basic dynamical systems (i.e. mass-spring-damper and DC motor).</p>
+<h5 id="instructions">Instructions:<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h5>
+<p>In this lab <a href="../documents/Lab5.pdf">instruction sheet</a>,</p>
+<ul>
+<li>Complete problems I (Mass-spring-damper) and IV (Motor position) in the MATLAB section.</li>
+</ul>
+<hr />
+<p><br></p>
+<h4 id="2_control_design_for_the_balbot_self-balancing_robot_using_state_feedback">2. Control Design for the BalBot (self-balancing robot) using State Feedback<a class="headerlink" href="#2_control_design_for_the_balbot_self-balancing_robot_using_state_feedback" title="Permanent link">&para;</a></h4>
+<p><img alt="robot" src="../media/robot.png" /></p>
+<p>In this section, we will learn about state feedback and use this approach to design a feedback controller for the Balbot.</p>
+<h5 id="instructions_1">Instructions:<a class="headerlink" href="#instructions_1" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p><strong>Stability of the Balbot</strong></p>
+<p>In Lab 4, we explored the transient response of the balbot in MATLAB and found that it is unstable (the system response is unbounded). Practically, we see that the robot falls over when it is placed upright. The stability of the system is dependent on the poles of the characteristic equation.</p>
+<ul>
+<li>
+<p>In your MATLAB script:</p>
+<ul>
+<li><strong>Compute</strong> the poles of the system. Hint: You can either use <code>pole(&lt;your-transfer-function&gt;)</code> or <code>eig(&lt;your-A-matrix&gt;)</code>.</li>
+<li><strong>Plot</strong> the poles and zeros of the system. Hint: You can either use <code>pzmap(&lt;your-transfer-function&gt;)</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Briefly describe</strong> your observation. </p>
+</li>
+</ul>
+<p><br></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please change the system parameter Gt = 2*Kt/R. This is because as we use the robot, we will be computing a single input voltage which would be the average of Vr and Vl (or V+/2)
+<br></p>
+<p><img alt="solutions" src="../media/solutions_update.png" /></p>
+</div>
+<ol>
+<li>
+<p><strong>Formulating the state feedback controller</strong></p>
+<p>Recall that the state-space of the balbot is:</p>
+<p><img alt="balbot statespace" src="../media/balbot_ss.png" /></p>
+<p>In formulating our state feedback, we set the input, U, as a function of the system state, X, and then choose the values of the K which would lead to a stable system.</p>
+<p><img alt="fdbk" src="../media/state_fdbk.png" /></p>
+<p>Hence, we get the new state-space of the robot to be:</p>
+<p><img alt="new balbot statespace" src="../media/new_balbot_ss.png" /></p>
+<p>Now to compute the values of K (i.e. k1, k2, k3) which make the system stable, we compute the new characteristic equation of the system as a function of K and then see the values of K for a given system pole placement.</p>
+<p><img alt="characteristic equation" src="../media/xteristic_equ.png" /></p>
+<ul>
+<li><strong>Compute</strong> the characteristic equation of the system as a function of K (i.e. k1, k2, k3) by hand. Hint: Your result will take the following structure:</li>
+</ul>
+<p><img alt="characteristic equation structure" src="../media/xteristic_equ_structure.png" /></p>
+<ul>
+<li>
+<p><strong>Formulate</strong> your desired characteristic equation based on your desired poles. </p>
+<ul>
+<li>Example 1: To set poles at p = -10, we will set our desired equation to be (s + 10)^3</li>
+<li>Example 2: To set poles at p1 = -10, p2 = -20, p3 = -2, we will set our desired equation to be (s + 10)(s + 20)(s + 2)</li>
+<li>
+<p>Hence, choose your desired poles and formulate your characteristic equation in the form below:</p>
+<p><img alt="desired characteristic equation structure" src="../media/desired_xteristic_equ.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Next, <strong>compute</strong> the values of K required to make your desired characteristic equation and your new system characteristic equation equal.</p>
+</li>
+</ul>
+<p><img alt="compare characteristic equations" src="../media/comparison.png" /></p>
+<p><br>
+<br></p>
+</li>
+<li>
+<p><strong>Evaluating the state feedback controller in MATLAB</strong></p>
+<p>Using the feedback gains (K) obtained above, evaluate the system transient response.</p>
+<ul>
+<li>
+<p>In your MATLAB script:</p>
+<ul>
+<li><strong>Compute</strong> the poles of the new system. Hint: Use <code>eig(&lt;your-(A-BK)-matrix&gt;)</code></li>
+<li><strong>Plot</strong> the poles and zeros of the system. <ul>
+<li>Hint: Create a new state-space model using A = A-BK, and others as the same as before, then use <code>ss2tf</code> to obtain the transfer function. Lastly use <code>pzmap(&lt;your-transfer-function&gt;)</code> to plot.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Briefly describe</strong> your observation. You can try different pole values to see the effect on the system response.</p>
+</li>
+</ul>
+<p><br>
+<br></p>
+</li>
+<li>
+<p><strong>Implementing on the Balbot</strong></p>
+<p>Once we have a good feedback controller in simulation, we can then implement it on the physical balbot.</p>
+<ul>
+<li>
+<p>Update the Balbot software on your local PC by running the <code>git pull</code> command in the directory where you cloned the WPI-ES3011 repository.</p>
+</li>
+<li>
+<p>Insert your <strong>model parameters</strong> and the <strong>state feedback gain</strong> values in the controller.cpp file. You will see the points marked in the file.</p>
+</li>
+<li>
+<p>Load the code to the robot and observe its behavior. </p>
+<ul>
+<li>Hint: The behavior of the balbot in balancing would be based on the poles you defined above and the resulting gains. If you find unsatisfactory behavior, modify your pole values and update the gains.</li>
+</ul>
+</li>
+<li>
+<p>Take a very short video (convert to a short GIF) of your best performing controller and <strong>report</strong> what control parameters are. See below for reference:</p>
+</li>
+</ul>
+<p><br></p>
+<p><img alt="balanced robot" src="../media/robot.gif" /></p>
+</li>
+</ol>
+<hr />
+<p><br></p>
+<h4 id="what_to_submit">What to Submit:<a class="headerlink" href="#what_to_submit" title="Permanent link">&para;</a></h4>
+<p>Prepare a report which contains the following:</p>
+<ul>
+<li><strong>Introduction:</strong> a few sentences to introduce the topic of the lab</li>
+<li><strong>Section 1:</strong> PID Control Design for Basic Dynamical Systems<ul>
+<li>Include plots and comments as the questions request.</li>
+</ul>
+</li>
+<li><strong>Section 2:</strong> Control Design for the BalBot (self-balancing robot) using State Feedback<ul>
+<li>Make sure you include all the plots, equations and observation discussions requested above.</li>
+<li>Upload the short GIF of your robot balancing after you push it (as you see in the figure above) to Canvas. Follow <a href="https://ezgif.com/video-to-gif">link</a> for a good GIF creator.</li>
+</ul>
+</li>
+<li><strong>Conclusion:</strong> a few sentences concluding the report explaining the goals, what you learned, and any other conclusions.</li>
+</ul>
               
             </div>
           </div>
