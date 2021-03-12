@@ -70,7 +70,7 @@ Hint: You can learn about the main idea of how to simplify the system, this is f
 
     - Take a very short video (convert to a short GIF) of your best performing controller and **report** what control parameters are. See below for reference.
 
-    Hint: The gif should be like that you push (smoothly) the robot at the left/right edge, and then the robot can recover from the sudden impact.
+    Hint: The gif should be like that you push (harshly) the robot at the left/right edge, try to make the robot rotate around z-axis. Then, the robot can recover from the sudden impact.
 
 ***
 <br>
