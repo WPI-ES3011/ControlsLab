@@ -68,12 +68,9 @@ Hint: You can learn about the main idea of how to simplify the system, this is f
     - Load the code to the robot and observe its behavior. 
         - Hint: The behavior of the balbot in balancing would be based on the poles you defined above and the resulting gains. If you find unsatisfactory behavior, modify your pole values and update the gains.
 
-    - Take a very short video (convert to a short GIF) of your best performing controller and **report** what control parameters are. See below for reference:
-    
-    <br>
+    - Take a very short video (convert to a short GIF) of your best performing controller and **report** what control parameters are. See below for reference.
 
-        
-    ![balanced robot](../media/robot.gif)
+    Hint: The gif should be like that you push (smoothly) the robot at the left/right edge, and then the robot can recover from the sudden impact.
 
 ***
 <br>
